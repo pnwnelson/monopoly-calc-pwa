@@ -1,0 +1,179 @@
+
+
+.property-title {
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+}
+
+.subproperty-title {
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  color: gray;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.subproperty-title > p {
+  padding: 8px;
+}
+
+.property-title > p {
+  /* padding: 8px; */
+}
+
+.property-title-container {
+  width: 200px;
+  height: 40px;
+  /* margin: 5px; */
+  float: left;
+  font-family: Kabel;
+}
+
+.subproperty-title-container {
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+  float: left;
+}
+
+.property-values-container {
+  /* margin: 5px; */
+  float: left;
+}
+
+.property-value-total-box-container {
+  width: 60px;
+  height: 40px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  /* margin: 5px; */
+  float: left;
+}
+
+.properties-item {
+  padding-bottom: 0px;
+}
+
+.property-item-list-container {
+  /* margin-top: 55px; */
+  padding-top: 165px;
+}
+
+.subproperty-item-list-container {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.owned-box {
+  border: 2px solid green;
+}
+
+.mortgaged-box {
+  border: 2px solid red;
+}
+
+.houses {
+  color: green;
+}
+
+.hotels {
+  color: red;
+}
+
+.value-amount {
+  font-size: 14px;
+  /* text-align: center; */
+  margin: 8px;
+  color: gray;
+  font-weight: 300;
+}
+
+
+/* --- Property Colors --- */
+
+.brown {
+  background-color: rgb(166, 44, 43);
+}
+
+.light-blue {
+  background-color: rgb(170, 224, 250);
+}
+
+.purple {
+  background-color: rgb(217, 58, 150);
+}
+
+.orange {
+  background-color: rgb(247, 148, 29);
+}
+
+.red {
+  background-color: rgb(237, 27, 36);
+}
+
+.yellow {
+  background-color: rgb(244, 233, 0);
+}
+
+.green {
+  background-color: rgb(31, 178, 90);
+}
+
+.blue {
+  background-color: rgb(0, 114, 186);
+}
+
+.property-name-abbr {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* .property-name-abbr {
+    display: inline-block;
+  } */
+
+  /* .property-name-full {
+    display: none;
+  } */
+
+  /* .property-title {
+    width: 60px;
+  } */
+
+  /* .subproperty-title {
+    width: 60px;
+  } */
+
+  /* .property-title-container {
+    width: 60px;
+  } */
+  .property-value-total-box-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 327px) {
+
+  .property-title {
+    width: 45px;
+  }
+
+  .property-title-container {
+    width: 45px;
+  }
+
+  .property-value-total-box-container {
+    width: 50px;
+  }
+
+  .value-amount {
+    font-size: 12px;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,94 @@
+/* --- Cash Asset tab --- */
+
+.cash-asset-container {
+  padding-top: 165px;
+}
+
+.cash-row-container {
+  display: inline-block;
+}
+
+.form-control {
+  display: inline-block !important;
+  width: 45px !important;
+  height: 40px !important;
+}
+
+.cash-label {
+  width: 60px;
+  display: inline-block;
+}
+
+.cash-number {
+  width: 55px;
+  height: 40px;
+  border-bottom: 1px solid lightgray;
+  /* border-radius: 4px; */
+  /* padding: 10px;
+  margin: 5px; */
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.cash-subtotal {
+  width: 85px;
+  height: 40px;
+  /* border-radius: 4px; */
+  /* padding: 10px;
+  margin: 5px; */
+  color: gray;
+  font-size: 16px;
+  font-weight: 300;
+/*  border: 1px solid lightgray;*/
+}
+
+.cash-total {
+  display: inline-block;
+  border: 1px solid lightgray;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: gray;
+  border-radius: 3px;
+  width: 240px;
+
+}
+
+.cash-total > h4 {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 5px 30px 5px 30px;
+}
+
+.cash-total > p {
+  display: inline-block;
+  font-size: 12px;
+  width: 100px;
+  border-top: 1px solid lightgray;
+  padding-top: 5px;
+
+}
+
+.cash-total-box {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 327px) {
+  .cash-label {
+    width: 40px;
+  }
+
+  .cash-subtotal {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  .cash-number {
+    font-size: 12px;
+    width: 45px;
+  }
+}
+

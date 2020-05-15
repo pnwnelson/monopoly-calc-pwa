@@ -1,0 +1,60 @@
+{
+   "subproperties": [
+  {
+   "id": 1,
+   "className": "subproperty-title",
+   "name": "Reading Railroad",
+   "abbrName": "RR",
+   "unowned": 0,
+   "owned": 200,
+   "mortgaged": 100
+ },
+ {
+   "id": 2,
+   "className": "subproperty-title",
+   "name": "Pennsylvania Railroad",
+   "abbrName": "PR",
+   "unowned": 0,
+   "owned": 200,
+   "mortgaged": 100
+ },
+ {
+   "id": 3,
+   "className": "subproperty-title",
+   "name": "B&O Railroad",
+   "abbrName": "BR",
+   "unowned": 0,
+   "owned": 200,
+   "mortgaged": 100
+ },
+ {
+   "id": 4,
+   "className": "subproperty-title",
+   "name": "Shortline",
+   "abbrName": "SL",
+   "unowned": 0,
+   "owned": 200,
+   "mortgaged": 100
+ },
+ {
+   "id": 5,
+   "className": "subproperty-title",
+   "name": "Electric Company",
+   "abbrName": "EC",
+   "unowned": 0,
+   "owned": 150,
+   "mortgaged": 75,
+   "propertyImg": "electricCo.png"
+ },
+ {
+   "id": 6,
+   "className": "subproperty-title",
+   "name": "Water Works",
+   "abbrName": "WW",
+   "unowned": 0,
+   "owned": 150,
+   "mortgaged": 75,
+   "propertyImg": "waterWorks.png"
+ }
+]
+}
