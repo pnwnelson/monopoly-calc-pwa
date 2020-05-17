@@ -23,9 +23,6 @@
   width: 55px;
   height: 40px;
   border-bottom: 1px solid lightgray;
-  /* border-radius: 4px; */
-  /* padding: 10px;
-  margin: 5px; */
   display: inline-block;
   text-align: center;
   font-size: 14px;
@@ -35,13 +32,10 @@
 .cash-subtotal {
   width: 85px;
   height: 40px;
-  /* border-radius: 4px; */
-  /* padding: 10px;
-  margin: 5px; */
   color: gray;
   font-size: 16px;
   font-weight: 300;
-/*  border: 1px solid lightgray;*/
+
 }
 
 .cash-total {

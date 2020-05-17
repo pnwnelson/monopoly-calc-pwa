@@ -8,8 +8,6 @@ import CashItemsList from "./cash/cash-items-list";
 import AdSenseDesktop from "./adsense/ad-sense-desktop.js";
 import AdSenseResponsive from "./adsense/ad-sense-responsive.js";
 import ReactGA from "react-ga"; // Google Analytics
-// import Tab from "react-bootstrap/Tab";
-// import Tabs from "react-bootstrap/Tabs";
 
 class NetWorthTotal extends React.Component {
   // Componant to show the combined final totals for <Properties /> and <CashItemList /> Not sure where to put this
@@ -168,21 +166,15 @@ class App extends React.Component {
           element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100';
           element.nextSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100';
           element.parentNode.classList = 'mv0 tabs__menu flex  nav bg-white property-tab z-max';
-          // element.style.bottomBorder = '2px solid white';
         }
         if (element.previousSibling) {
           element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100';
           element.previousSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100';
           element.parentNode.classList = 'mv0 tabs__menu flex  nav bg-white cash-tab z-max';
-          // element.style.bottomBorder = '2px solid white';
         }
       });
     });
   }
-
-  // componentWillUnmount() {
-  //   document.removeEventListener('keydown', handleKeyPress);
-  // }
 
 
   handleCashInput(id, newBillFinalTotal) {
@@ -213,9 +205,6 @@ class App extends React.Component {
   }
 
   render() {
-    // function numberWithCommas(x) {
-    //   return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
-    // }
 
     const billsNode = bills.bills.map(bill => {
       return (
@@ -336,55 +325,6 @@ class App extends React.Component {
                       </div>
                     </div>
                   </div>
-                  {/* <Tabs defaultActiveKey={1} id="asset-tabs" className="center relative">
-                    <div className="db dn-ns fixed items-center justify-center ad-sense-container bg-white z-999">
-                      <div className="tc pt3 f7 gray">Ads help support this site! Thanks for your support!</div>
-                      <AdSenseResponsive
-                        client="ca-pub-6063578944512286"
-                        slot="8034558454"
-                        format="auto"
-                      />          
-                    </div>
-                    <div className="dn db-ns fixed items-center justify-center ad-sense-container bg-white z-999">
-                      <div className="tc pt3 f7 gray">Ads help support this site! Thanks for your support!</div>
-                      <AdSenseDesktop
-                        client="ca-pub-6063578944512286"
-                        slot="9906828034"
-                      />          
-                    </div>
-                    <Tab eventKey={1} title="Property Assets">
-                      <div className="flex flex-row justify-center property-item-list-container">
-                        <ul className="list-unstyled properties-item pl0 w-100 w-auto-l">
-                          {propertyNode}
-                        </ul>
-                      </div>
-                      <div className="dn db-ns items-center justify-center ad-sense-container-2 bg-white z-999">
-                        <AdSenseDesktop
-                          client="ca-pub-6063578944512286"
-                          slot="6243695446"
-                        />          
-                      </div>
-                      <div className="flex flex-row justify-center subproperty-item-list-container">
-                        <ul className="list-unstyled properties-item pl0 w-100 w-auto-l">
-                          {subPropertyNode}
-                        </ul>
-                      </div>
-                    </Tab>
-                    <Tab eventKey={2} title="Cash Assets" className="flex center">
-                      <div className="flex flex-row items-center justify-center cash-asset-container">
-                        <ul className="w-100 pl0">
-                          {billsNode}
-                        </ul>
-                      </div>
-                      <div className="flex flex-row justify-center cash-total-box">
-                        <div className="text-center">
-                          <CashAssetsTotal
-                            billFinalTotal={this.state.billFinalTotal}
-                          />
-                        </div>
-                      </div>
-                    </Tab>
-                  </Tabs> */}
                 </div>
               </div>
             </div>
@@ -403,26 +343,5 @@ class App extends React.Component {
     );
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
