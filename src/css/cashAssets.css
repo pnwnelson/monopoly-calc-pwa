@@ -76,7 +76,14 @@
   margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .cash-asset-container {
+    padding-top: 180px;
+  }
+}
+
 @media (max-width: 327px) {
+
   .cash-label {
     width: 40px;
   }

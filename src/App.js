@@ -8,8 +8,8 @@ import CashItemsList from "./cash/cash-items-list";
 import AdSenseDesktop from "./adsense/ad-sense-desktop.js";
 import AdSenseResponsive from "./adsense/ad-sense-responsive.js";
 import ReactGA from "react-ga"; // Google Analytics
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
+// import Tab from "react-bootstrap/Tab";
+// import Tabs from "react-bootstrap/Tabs";
 
 class NetWorthTotal extends React.Component {
   // Componant to show the combined final totals for <Properties /> and <CashItemList /> Not sure where to put this
@@ -92,11 +92,9 @@ class CashAssetsTotal extends React.Component {
     const taxTotal = Math.round(total * 0.1);
 
     return (
-      <div>
-        <div className="cash-total text-center">
-          <h4>CASH TOTAL: ${totalWithCommas}</h4>
-          <p>INCOME TAX: ${incomeTax(taxTotal)}</p>
-        </div>
+      <div className="flex flex-column items-center gray ph4 pv2 ba br1 b--gray w5">
+        <h4 className="f5 mv2">CASH TOTAL: ${totalWithCommas}</h4>
+        <p className="f7 mb2">INCOME TAX: ${incomeTax(taxTotal)}</p>
       </div>
     );
   }
@@ -108,6 +106,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+
       billFinalTotal: {
         1: 0,
         2: 0,
@@ -159,6 +158,32 @@ class App extends React.Component {
     ReactGA.pageview("/");
   }
 
+  componentDidMount() {
+    let tabElements = document.getElementsByClassName('tabs__menu-item');
+
+    Array.from(tabElements).forEach(function(element) {
+      element.addEventListener('click', function() {
+        console.log('element clicked ' + element)
+        if (element.nextSibling) {
+          element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100';
+          element.nextSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100';
+          element.parentNode.classList = 'mv0 tabs__menu flex  nav bg-white property-tab z-max';
+          // element.style.bottomBorder = '2px solid white';
+        }
+        if (element.previousSibling) {
+          element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100';
+          element.previousSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100';
+          element.parentNode.classList = 'mv0 tabs__menu flex  nav bg-white cash-tab z-max';
+          // element.style.bottomBorder = '2px solid white';
+        }
+      });
+    });
+  }
+
+  // componentWillUnmount() {
+  //   document.removeEventListener('keydown', handleKeyPress);
+  // }
+
 
   handleCashInput(id, newBillFinalTotal) {
     const cashTemp = { ...this.state.billFinalTotal, [id]: +newBillFinalTotal };
@@ -188,9 +213,9 @@ class App extends React.Component {
   }
 
   render() {
-    function numberWithCommas(x) {
-      return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
-    }
+    // function numberWithCommas(x) {
+    //   return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
+    // }
 
     const billsNode = bills.bills.map(bill => {
       return (
@@ -226,7 +251,7 @@ class App extends React.Component {
       <div className="relative">
         <div className="flex flex-column container-page-width center">
           <div className="flex flex-column items-center">
-            <div className="fixed flex flex-wrap items-center justify-between app-header pv3">
+            <div className="fixed flex flex-wrap items-center justify-between app-header pv2 pv3-ns">
               <div className="w-50 w-25-l pl3 pl0-l">
                 <div className="fl flex flex-column items-center">
                   <h3 className="kabel-font-main title-logo mt0 mb2">MONOPOLY</h3>
@@ -241,7 +266,7 @@ class App extends React.Component {
                 propertyFinalTotal={this.state.propertyFinalTotal}
                 subPropertyFinalTotal={this.state.subPropertyFinalTotal}
               />
-              <h4 className="db-m dn-ns sub-header f5 center">
+              <h4 className="db-m dn-ns sub-header f6 f5-l center">
                 Figure out the net worth of the game winner!
               </h4>
             </div>
@@ -264,20 +289,20 @@ class App extends React.Component {
                       />          
                     </div>
                   <div className="tabs">
-                    <div className="tabs__menu flex justify-center bb nav bg-white">
-                      <label htmlFor="section1" className="tabs__menu-item ph3 tc bg-white pv2 bg-animate hover-bg-white pointer bl br bt">
-                        Property Assets
-                      </label>
-                      <label htmlFor="section2" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer">
-                        Cash Assets
-                      </label>
+                    <div id="tabs" className="mv0 tabs__menu flex nav bg-white property-tab z-max">
+                      <label htmlFor="section1" id="propertyAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100">
+                          Property Assets
+                        </label>
+                      <label htmlFor="section2" id="cashAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100">
+                          Cash Assets
+                        </label> 
                     </div>
                     <div className="tabs__content">
                       <div>
                         <input type="radio" className="dn" name="sections" id="section1" defaultChecked />
                         <div className="tabs__content__info">
                           <div className="flex flex-row justify-center property-item-list-container">
-                            <ul className="list-unstyled properties-item pl0 w-100 w-auto-l">
+                            <ul className="list-unstyled properties-item pl0 f7 f6-l">
                               {propertyNode}
                             </ul>
                           </div>
@@ -288,7 +313,7 @@ class App extends React.Component {
                             />          
                           </div>
                           <div className="flex flex-row justify-center subproperty-item-list-container">
-                            <ul className="list-unstyled properties-item pl0 w-100 w-auto-l">
+                            <ul className="list-unstyled properties-item pl0 f7 f6-l">
                               {subPropertyNode}
                             </ul>
                           </div>
@@ -303,11 +328,9 @@ class App extends React.Component {
                             </ul>
                           </div>
                           <div className="flex flex-row justify-center cash-total-box">
-                            <div className="text-center">
-                              <CashAssetsTotal
-                                billFinalTotal={this.state.billFinalTotal}
-                              />
-                            </div>
+                            <CashAssetsTotal
+                              billFinalTotal={this.state.billFinalTotal}
+                            />
                           </div>
                         </div>
                       </div>
@@ -366,8 +389,9 @@ class App extends React.Component {
               </div>
             </div>
           </div>
-          <div className="github-link">
+          <div className="">
             <a
+              className="f7"
               href="https://github.com/pnwnelson/monopoly-calc/issues"
               target="bob_dole"
             >

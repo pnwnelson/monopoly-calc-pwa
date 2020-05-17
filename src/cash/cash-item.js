@@ -22,13 +22,10 @@ class CashItem extends React.Component {
 		const { bill } = this.props
 
 		return (
-			<div>
-				<form>
-					<img src={bill.billImage} alt={bill.imgAlt} className="cash-label text-right mr2" /> x
-					<input className="cash-number bn" type="number" onChange={this.handleInput} placeholder="#"/>
-				</form>
-			</div>
-
+			<form className="flex flex-row items-center">
+				<img src={bill.billImage} alt={bill.imgAlt} className="cash-label text-right mr2" /> x
+				<input className="cash-number bn" type="number" onChange={this.handleInput} placeholder="#"/>
+			</form>
 		)
 	}
 }

@@ -8,7 +8,7 @@ class PropertyName extends React.Component {
 
   render() {
 
-    const abbrName = this.props.property.abbrName // Showing just the first three letters of Property name.
+    // const abbrName = this.props.property.abbrName // Showing just the first three letters of Property name.
     const fullName = this.props.property.name
 
     return (
