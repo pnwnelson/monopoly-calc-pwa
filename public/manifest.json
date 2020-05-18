@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
-  "theme_color": "ff3333",
+  "theme_color": "#ff3333",
   "description": "Calculate and figure out the net worth of the Monopoly board game winner",
   "icons": [    {
     "src": "/img/android-icon-192x192.png",
