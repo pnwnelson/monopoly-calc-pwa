@@ -176,6 +176,12 @@ class App extends React.Component {
     });
   }
 
+  handleCopyBTCAddress () {
+    let copyText = document.querySelector('#btc-address')
+    copyText.select()
+    document.execCommand('copy')
+    alert('Copied the BTC address of: ' + copyText.value + ' to the clipboard')
+  }
 
   handleCashInput(id, newBillFinalTotal) {
     const cashTemp = { ...this.state.billFinalTotal, [id]: +newBillFinalTotal };
@@ -263,7 +269,7 @@ class App extends React.Component {
               <div className="flex flex-row">
                 <div className="w-100 relative">
                 <div className="db dn-ns fixed items-center justify-center ad-sense-container bg-white">
-                      <div className="tc pt3 f7 gray">Ads help support this site! Thanks for your support!</div>
+                      <div className="tc pt3 f7 gray">The ads below help support this site! Thanks for your support! <a href="#donate">Donate!</a></div>
                       <AdSenseResponsive
                         client="ca-pub-6063578944512286"
                         slot="8034558454"
@@ -271,7 +277,7 @@ class App extends React.Component {
                       />          
                     </div>
                     <div className="dn db-ns fixed items-center justify-center ad-sense-container bg-white">
-                      <div className="tc pt3 f7 gray">Ads help support this site! Thanks for your support!</div>
+                      <div className="tc pt3 f7 gray">The ads below help support this site! Thanks for your support! <a href="#donate">Donate!</a> </div>
                       <AdSenseDesktop
                         client="ca-pub-6063578944512286"
                         slot="9906828034"
@@ -327,16 +333,14 @@ class App extends React.Component {
                   </div>
                 </div>
               </div>
+              <div id="donate" className="flex flex-column items-center mb5 mh2 mh0-ns">
+                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you're able, me and my family accept donations to help keep the calculator going. <br/>Donations are much appreciated!</div>
+                <div className="w-100 flex flex-row bb br bl b--light-gray justify-center pa2">
+                  <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br3"><i className="mr1 fab fa-paypal"></i>PayPal</a>
+                  <div onClick={this.handleCopyBTCAddress} className="link dim bg-orange pa3 mh1 white br3 pointer"><i className="mr1 fab fa-bitcoin"></i>Bitcoin<input type="hidden" id="btc-address" value="36Gr2KKZpyGPwZCzCGNm3SchpVBiZtx8Zv" /></div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="">
-            <a
-              className="f7"
-              href="https://github.com/pnwnelson/monopoly-calc/issues"
-              target="bob_dole"
-            >
-              Github Repo
-            </a>
           </div>
         </div>
       </div>

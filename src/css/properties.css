@@ -125,6 +125,10 @@
 
 @media (max-width: 768px) {
 
+  .property-item-list-container {
+    padding-top: 180px;
+  }
+
   .property-title {
     width: 160px;
   }
