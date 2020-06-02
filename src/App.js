@@ -163,13 +163,13 @@ class App extends React.Component {
       element.addEventListener('click', function() {
         console.log('element clicked ' + element)
         if (element.nextSibling) {
-          element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100';
-          element.nextSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100';
+          element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br br2 br--top bl w-100 b--light-silver';
+          element.nextSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100 b--light-silver';
           element.parentNode.classList = 'mv0 tabs__menu flex  nav bg-white property-tab z-max';
         }
         if (element.previousSibling) {
-          element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100';
-          element.previousSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100';
+          element.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br br2 br--top bl w-100 b--light-silver';
+          element.previousSibling.classList = 'tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100 b--light-silver';
           element.parentNode.classList = 'mv0 tabs__menu flex  nav bg-white cash-tab z-max';
         }
       });
@@ -268,27 +268,27 @@ class App extends React.Component {
             <div className="flex flex-column w-100 main-section">
               <div className="flex flex-row">
                 <div className="w-100 relative">
-                <div className="db dn-ns fixed items-center justify-center ad-sense-container bg-white">
-                      <div className="tc pt3 f7 gray">The ads below help support this site! Thanks for your support! <a href="#donate">Donate!</a></div>
-                      <AdSenseResponsive
-                        client="ca-pub-6063578944512286"
-                        slot="8034558454"
-                        format="auto"
-                      />          
-                    </div>
-                    <div className="dn db-ns fixed items-center justify-center ad-sense-container bg-white">
-                      <div className="tc pt3 f7 gray">The ads below help support this site! Thanks for your support! <a href="#donate">Donate!</a> </div>
-                      <AdSenseDesktop
-                        client="ca-pub-6063578944512286"
-                        slot="9906828034"
-                      />          
-                    </div>
+                  <div className="fixed items-center justify-center ad-sense-container bg-white">
+                    <div className="tc pv2 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate">Donate!</a></div>
+                    {/* <AdSenseResponsive
+                      client="ca-pub-6063578944512286"
+                      slot="8034558454"
+                      format="auto"
+                    />           */}
+                  </div>
+                  {/* <div className="dn db-ns fixed items-center justify-center ad-sense-container bg-white">
+                    <div className="tc pt3 f7 gray">The ads below help support this site! Thanks for your support! <a href="#donate">Donate!</a> </div>
+                    <AdSenseDesktop
+                      client="ca-pub-6063578944512286"
+                      slot="9906828034"
+                    />          
+                  </div> */}
                   <div className="tabs">
                     <div id="tabs" className="mv0 tabs__menu flex nav bg-white property-tab z-max">
-                      <label htmlFor="section1" id="propertyAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br bl w-100">
+                      <label htmlFor="section1" id="propertyAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br br2 br--top bl w-100 b--light-silver">
                           Property Assets
                         </label>
-                      <label htmlFor="section2" id="cashAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100">
+                      <label htmlFor="section2" id="cashAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100 b--light-silver">
                           Cash Assets
                         </label> 
                     </div>
@@ -297,18 +297,18 @@ class App extends React.Component {
                         <input type="radio" className="dn" name="sections" id="section1" defaultChecked />
                         <div className="tabs__content__info">
                           <div className="flex flex-row justify-center property-item-list-container">
-                            <ul className="list-unstyled properties-item pl0 f7 f6-l">
+                            <ul className="list-unstyled properties-item pl0 f7 f6-l mv0">
                               {propertyNode}
                             </ul>
                           </div>
-                          <div className="dn db-ns items-center justify-center ad-sense-container-2 bg-white z-999">
+                          {/* <div className="dn db-ns items-center justify-center ad-sense-container-2 bg-white z-999">
                             <AdSenseDesktop
                               client="ca-pub-6063578944512286"
                               slot="6243695446"
                             />          
-                          </div>
+                          </div> */}
                           <div className="flex flex-row justify-center subproperty-item-list-container">
-                            <ul className="list-unstyled properties-item pl0 f7 f6-l">
+                            <ul className="list-unstyled properties-item pl0 f7 f6-l mv0">
                               {subPropertyNode}
                             </ul>
                           </div>
@@ -334,7 +334,7 @@ class App extends React.Component {
                 </div>
               </div>
               <div id="donate" className="flex flex-column items-center mb5 mh2 mh0-ns">
-                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you're able, me and my family accept donations to help keep the calculator going. <br/>Donations are much appreciated!</div>
+                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you're able, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> accept donations to help keep the calculator ad free. <br/>Donations are much appreciated!</div>
                 <div className="w-100 flex flex-row bb br bl b--light-gray justify-center pa2">
                   <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br3"><i className="mr1 fab fa-paypal"></i>PayPal</a>
                   <div onClick={this.handleCopyBTCAddress} className="link dim bg-orange pa3 mh1 white br3 pointer"><i className="mr1 fab fa-bitcoin"></i>Bitcoin<input type="hidden" id="btc-address" value="36Gr2KKZpyGPwZCzCGNm3SchpVBiZtx8Zv" /></div>

@@ -1,7 +1,7 @@
 /* --- Cash Asset tab --- */
 
 .cash-asset-container {
-  padding-top: 165px;
+  padding-top: 75px;
 }
 
 .cash-row-container {
@@ -70,11 +70,11 @@
   margin-bottom: 50px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .cash-asset-container {
-    padding-top: 180px;
+    padding-top: 75px;
   }
-}
+} */
 
 @media (max-width: 327px) {
 

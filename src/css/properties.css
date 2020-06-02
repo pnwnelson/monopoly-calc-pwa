@@ -52,14 +52,14 @@
 }
 
 .property-item-list-container {
-  padding-top: 165px;
+  padding-top: 70px;
 }
 
-.subproperty-item-list-container {
+/* .subproperty-item-list-container {
   margin-top: 10px;
   margin-bottom: 50px;
   padding-bottom: 20px;
-}
+} */
 
 .owned-box {
   border: 2px solid green;
@@ -126,7 +126,7 @@
 @media (max-width: 768px) {
 
   .property-item-list-container {
-    padding-top: 180px;
+    padding-top: 85px;
   }
 
   .property-title {

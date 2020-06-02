@@ -8,15 +8,15 @@ class SubPropertyName extends React.Component {
 
   render() {
 
-    const abbrName = this.props.subproperty.abbrName // Showing just the first three letters of Property name.
+    // const abbrName = this.props.subproperty.abbrName // Showing just the first three letters of Property name.
     const fullName = this.props.subproperty.name
 
     return (
       <div className="flex">
-        <div className={this.props.subproperty.className + " flex dn-l self-center"}>
+        {/* <div className={this.props.subproperty.className + " flex dn-l self-center"}>
           <span className="self-center center">{abbrName}</span>
-        </div>
-        <div className={this.props.subproperty.className + " dn flex-l self-center"}>
+        </div> */}
+        <div className={this.props.subproperty.className + " flex self-center"}>
           <span className="self-center center">{fullName}</span>
         </div>
       </div>  
