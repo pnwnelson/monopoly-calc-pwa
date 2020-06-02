@@ -246,6 +246,19 @@ h3 {
   display: block;
 }
 
+.btc-orange {
+  background-color: rgb(242, 146, 46);
+}
+
+.eth-blue {
+  background-color: rgb(100, 130, 231);
+}
+
+.offscreen {
+  position: absolute;
+  left: -999em;
+}
+
 /* Mobile Views */
 
 @media (max-width: 768px) {
