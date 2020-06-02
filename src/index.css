@@ -184,7 +184,7 @@ h3 {
   right: 100%;
   bottom: 0;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #aaa;
 }
 
 .property-tab:first-child:after {
@@ -193,7 +193,7 @@ h3 {
   left: 100%;
   bottom: 0;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #aaa;
 }
 
 .cash-tab:first-child:before {
@@ -202,7 +202,7 @@ h3 {
   right: 100%;
   bottom: 0;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #aaa;
 }
 
 .cash-tab:first-child:after {
@@ -211,14 +211,14 @@ h3 {
   left: 100%;
   bottom: 0;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #aaa;
 }
 
 /*Google Ad Units*/
 
 .ad-sense-container {
-  top: 120px;
-  height: 100px;
+  top: 122px;
+  /* height: 100px; */
   width: 728px;
 }
 
