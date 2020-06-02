@@ -5,8 +5,8 @@ import bills from "./data/bills.json";
 import Property from "./properties/property";
 import SubProperty from "./properties/subproperty";
 import CashItemsList from "./cash/cash-items-list";
-import AdSenseDesktop from "./adsense/ad-sense-desktop.js";
-import AdSenseResponsive from "./adsense/ad-sense-responsive.js";
+// import AdSenseDesktop from "./adsense/ad-sense-desktop.js";
+// import AdSenseResponsive from "./adsense/ad-sense-responsive.js";
 import ReactGA from "react-ga"; // Google Analytics
 
 class NetWorthTotal extends React.Component {
