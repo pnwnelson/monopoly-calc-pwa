@@ -183,6 +183,13 @@ class App extends React.Component {
     alert('Copied the BTC address of: ' + copyText.value + ' to the clipboard')
   }
 
+  handleCopyETHAddress () {
+    let copyText = document.querySelector('#eth-address')
+    copyText.select()
+    document.execCommand('copy')
+    alert('Copied the ETH address of: ' + copyText.value + ' to the clipboard')
+  }
+
   handleCashInput(id, newBillFinalTotal) {
     const cashTemp = { ...this.state.billFinalTotal, [id]: +newBillFinalTotal };
     this.setState({
@@ -337,7 +344,12 @@ class App extends React.Component {
                 <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you're able, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> accept donations to help keep the calculator ad free. <br/>Donations are much appreciated!</div>
                 <div className="w-100 flex flex-row bb br bl b--light-gray justify-center pa2">
                   <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br3"><i className="mr1 fab fa-paypal"></i>PayPal</a>
-                  <div onClick={this.handleCopyBTCAddress} className="link dim bg-orange pa3 mh1 white br3 pointer"><i className="mr1 fab fa-bitcoin"></i>Bitcoin<input type="hidden" id="btc-address" value="36Gr2KKZpyGPwZCzCGNm3SchpVBiZtx8Zv" /></div>
+                  <div onClick={this.handleCopyBTCAddress} className="flex items-center link dim btc-orange pa2 mh1 white br3 pointer">
+                    <i className="f3 fab fa-bitcoin"></i><input className="offscreen" aria-hidden="true" id="btc-address" value="36Gr2KKZpyGPwZCzCGNm3SchpVBiZtx8Zv" />
+                  </div>
+                  <div onClick={this.handleCopyETHAddress} className="flex items-center link dim eth-blue pa2 mh1 white br3 pointer">
+                    <i className="f3 fab fa-ethereum"></i><input className="offscreen" aria-hidden="true" id="eth-address" value="0xD4bD1D023261A1AE1796925c41091040BDB3B1A0" />
+                  </div>
                 </div>
               </div>
             </div>
