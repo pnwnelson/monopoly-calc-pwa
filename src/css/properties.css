@@ -52,7 +52,7 @@
 }
 
 .property-item-list-container {
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 /* .subproperty-item-list-container {
@@ -126,7 +126,7 @@
 @media (max-width: 768px) {
 
   .property-item-list-container {
-    padding-top: 85px;
+    padding-top: 100px;
   }
 
   .property-title {

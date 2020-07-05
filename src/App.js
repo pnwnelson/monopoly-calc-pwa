@@ -276,7 +276,7 @@ class App extends React.Component {
               <div className="flex flex-row">
                 <div className="w-100 relative">
                   <div className="fixed items-center justify-center ad-sense-container bg-white">
-                    <div className="tc pv2 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate">Donate!</a></div>
+                    <div className="tc pv3 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate" className="pa1 ph2 bg-green white dim br1 link">Donate!<i className="pl1 fa fa-angle-double-down" aria-hidden="true"></i></a></div>
                     {/* <AdSenseResponsive
                       client="ca-pub-6063578944512286"
                       slot="8034558454"
@@ -341,13 +341,13 @@ class App extends React.Component {
                 </div>
               </div>
               <div id="donate" className="flex flex-column items-center mb5 mh2 mh0-ns">
-                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you're able, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> accept donations to help keep the calculator ad free. <br/>Donations are much appreciated!</div>
+                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you enjoyed the calculator, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> graciously accept donations to help keep it ad free. <br/>Thank you for your support!</div>
                 <div className="w-100 flex flex-row bb br bl b--light-gray justify-center pa2">
-                  <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br3"><i className="mr1 fab fa-paypal"></i>PayPal</a>
-                  <div onClick={this.handleCopyBTCAddress} className="flex items-center link dim btc-orange pa2 mh1 white br3 pointer">
+                  <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br2"><i className="mr1 fab fa-paypal"></i>PayPal</a>
+                  <div onClick={this.handleCopyBTCAddress} className="flex items-center link dim btc-orange pa2 mh1 white br2 pointer">
                     <i className="f3 fab fa-bitcoin"></i><input className="offscreen" aria-hidden="true" id="btc-address" value="36Gr2KKZpyGPwZCzCGNm3SchpVBiZtx8Zv" />
                   </div>
-                  <div onClick={this.handleCopyETHAddress} className="flex items-center link dim eth-blue pa2 mh1 white br3 pointer">
+                  <div onClick={this.handleCopyETHAddress} className="flex items-center link dim eth-blue pa2 mh1 white br2 pointer">
                     <i className="f3 fab fa-ethereum"></i><input className="offscreen" aria-hidden="true" id="eth-address" value="0xD4bD1D023261A1AE1796925c41091040BDB3B1A0" />
                   </div>
                 </div>
