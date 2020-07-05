@@ -276,7 +276,7 @@ class App extends React.Component {
               <div className="flex flex-row">
                 <div className="w-100 relative">
                   <div className="fixed items-center justify-center ad-sense-container bg-white">
-                    <div className="tc pv3 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate" className="pa1 ph2 bg-green white dim br1 link">Donate!</a></div>
+                    <div className="tc pv3 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate" className="pa1 ph2 bg-green white dim br1 link">Donate!<i className="pl1 fa fa-angle-double-down" aria-hidden="true"></i></a></div>
                     {/* <AdSenseResponsive
                       client="ca-pub-6063578944512286"
                       slot="8034558454"
