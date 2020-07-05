@@ -11,7 +11,7 @@ class SubPropertyValuesTotal extends React.Component {
   	const subPropertyValueTotal = this.props.subPropertyValueTotal
 
     return (
-        <div className="property-value-total-box-container">
+        <div className="flex items-center property-value-total-box-container">
         	<div className="value-amount">
         		${subPropertyValueTotal}
         	</div>
