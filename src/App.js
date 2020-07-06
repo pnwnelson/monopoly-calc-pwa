@@ -177,6 +177,10 @@ class App extends React.Component {
   }
 
   handleCopyBTCAddress () {
+    ReactGA.event({
+      category: 'Donate',
+      action: 'Clicked BTC Button'
+    });
     let copyText = document.querySelector('#btc-address')
     copyText.select()
     document.execCommand('copy')
@@ -184,6 +188,10 @@ class App extends React.Component {
   }
 
   handleCopyETHAddress () {
+    ReactGA.event({
+      category: 'Donate',
+      action: 'Clicked ETH Button'
+    });
     let copyText = document.querySelector('#eth-address')
     copyText.select()
     document.execCommand('copy')
@@ -214,6 +222,20 @@ class App extends React.Component {
     };
     this.setState({
       subPropertyFinalTotal: subPropertyTemp
+    });
+  }
+
+  handleClickedDonateButton() {
+    ReactGA.event({
+      category: 'Donate',
+      action: 'Clicked Donate Button'
+    });
+  }
+
+  handleClickedPaypalDonateButton() {
+    ReactGA.event({
+      category: 'Donate',
+      action: 'Clicked Paypal Button'
     });
   }
 
@@ -276,7 +298,7 @@ class App extends React.Component {
               <div className="flex flex-row">
                 <div className="w-100 relative">
                   <div className="fixed items-center justify-center ad-sense-container bg-white">
-                    <div className="tc pv3 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate" className="pa1 ph2 bg-green white dim br1 link">Donate!<i className="pl1 fa fa-angle-double-down" aria-hidden="true"></i></a></div>
+                    <div className="tc pv3 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate" className="pa1 ph2 bg-green white dim br1 link" onClick={this.handleClickedDonateButton}>Donate!<i className="pl1 fa fa-angle-double-down" aria-hidden="true"></i></a></div>
                     {/* <AdSenseResponsive
                       client="ca-pub-6063578944512286"
                       slot="8034558454"
@@ -343,7 +365,7 @@ class App extends React.Component {
               <div id="donate" className="flex flex-column items-center mb5 mh2 mh0-ns">
                 <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you enjoyed the calculator, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> graciously accept donations to help keep it ad free. <br/>Thank you for your support!</div>
                 <div className="w-100 flex flex-row bb br bl b--light-gray justify-center pa2">
-                  <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br2"><i className="mr1 fab fa-paypal"></i>PayPal</a>
+                  <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br2" onClick={this.handleClickedPaypalDonateButton}><i className="mr1 fab fa-paypal"></i>PayPal</a>
                   <div onClick={this.handleCopyBTCAddress} className="flex items-center link dim btc-orange pa2 mh1 white br2 pointer">
                     <i className="f3 fab fa-bitcoin"></i><input className="offscreen" aria-hidden="true" id="btc-address" value="36Gr2KKZpyGPwZCzCGNm3SchpVBiZtx8Zv" />
                   </div>
