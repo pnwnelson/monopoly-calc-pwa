@@ -5,8 +5,8 @@ import bills from "./data/bills.json";
 import Property from "./properties/property";
 import SubProperty from "./properties/subproperty";
 import CashItemsList from "./cash/cash-items-list";
-// import AdSenseDesktop from "./adsense/ad-sense-desktop.js";
-// import AdSenseResponsive from "./adsense/ad-sense-responsive.js";
+import AdSenseDesktop from "./adsense/ad-sense-desktop.js";
+import AdSenseResponsive from "./adsense/ad-sense-responsive.js";
 import ReactGA from "react-ga"; // Google Analytics
 
 class NetWorthTotal extends React.Component {
@@ -298,20 +298,20 @@ class App extends React.Component {
               <div className="flex flex-row">
                 <div className="w-100 relative">
                   <div className="fixed items-center justify-center ad-sense-container bg-white">
-                    <div className="tc pv3 f7 gray mt2 ba b--light-gray">Ads free calculator! Want to help support it? <a href="#donate" className="pa1 ph2 bg-green white dim br1 link" onClick={this.handleClickedDonateButton}>Donate!<i className="pl1 fa fa-angle-double-down" aria-hidden="true"></i></a></div>
-                    {/* <AdSenseResponsive
+                    {/* <div className="tc pv3 f7 gray mt2 ba b--light-gray">Want to help support this Calculator? <a href="#donate" className="pa1 ph2 bg-green white dim br1 link" onClick={this.handleClickedDonateButton}>Donate!<i className="pl1 fa fa-angle-double-down" aria-hidden="true"></i></a></div> */}
+                    <AdSenseResponsive
                       client="ca-pub-6063578944512286"
                       slot="8034558454"
                       format="auto"
-                    />           */}
+                    />          
                   </div>
-                  {/* <div className="dn db-ns fixed items-center justify-center ad-sense-container bg-white">
+                  <div className="dn db-ns fixed items-center justify-center ad-sense-container bg-white">
                     <div className="tc pt3 f7 gray">The ads below help support this site! Thanks for your support! <a href="#donate">Donate!</a> </div>
                     <AdSenseDesktop
                       client="ca-pub-6063578944512286"
                       slot="9906828034"
                     />          
-                  </div> */}
+                  </div>
                   <div className="tabs">
                     <div id="tabs" className="mv0 tabs__menu flex nav bg-white property-tab z-max">
                       <label htmlFor="section1" id="propertyAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br br2 br--top bl w-100 b--light-silver">
@@ -330,12 +330,12 @@ class App extends React.Component {
                               {propertyNode}
                             </ul>
                           </div>
-                          {/* <div className="dn db-ns items-center justify-center ad-sense-container-2 bg-white z-999">
+                          <div className="dn db-ns items-center justify-center ad-sense-container-2 bg-white z-999">
                             <AdSenseDesktop
                               client="ca-pub-6063578944512286"
                               slot="6243695446"
                             />          
-                          </div> */}
+                          </div>
                           <div className="flex flex-row justify-center subproperty-item-list-container">
                             <ul className="list-unstyled properties-item pl0 f7 f6-l mv0">
                               {subPropertyNode}
@@ -363,7 +363,7 @@ class App extends React.Component {
                 </div>
               </div>
               <div id="donate" className="flex flex-column items-center mb5 mh2 mh0-ns">
-                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you enjoyed the calculator, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> graciously accept donations to help keep it ad free. <br/>Thank you for your support!</div>
+                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you enjoyed the calculator, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> graciously accept donations. <br/>Thank you for your support!</div>
                 <div className="w-100 flex flex-row bb br bl b--light-gray justify-center pa2">
                   <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br2" onClick={this.handleClickedPaypalDonateButton}><i className="mr1 fab fa-paypal"></i>PayPal</a>
                   <div onClick={this.handleCopyBTCAddress} className="flex items-center link dim btc-orange pa2 mh1 white br2 pointer">
