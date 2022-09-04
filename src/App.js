@@ -7,7 +7,7 @@ import SubProperty from "./properties/subproperty";
 import CashItemsList from "./cash/cash-items-list";
 import AdSenseDesktop from "./adsense/ad-sense-desktop.js";
 import AdSenseResponsive from "./adsense/ad-sense-responsive.js";
-import ReactGA from "react-ga"; // Google Analytics
+import ReactGA from "react-ga4"; // Google Analytics
 
 class NetWorthTotal extends React.Component {
   // Componant to show the combined final totals for <Properties /> and <CashItemList /> Not sure where to put this
@@ -152,7 +152,7 @@ class App extends React.Component {
     this.handleSubPropertyValueInput = this.handleSubPropertyValueInput.bind(
       this
     );
-    ReactGA.initialize("UA-92696610-1"); // Google Analytics stuff
+    ReactGA.initialize("G-6NFLR4SR6M"); // Google Analytics stuff
     ReactGA.pageview("/");
   }
 
