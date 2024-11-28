@@ -278,8 +278,10 @@ class App extends React.Component {
             <div className="fixed flex flex-wrap items-center justify-between app-header pv2 pv3-ns">
               <div className="w-50 w-25-l pl3 pl0-l">
                 <div className="fl flex flex-column items-center">
-                  <h3 className="kabel-font-main title-logo mt0 mb2">MONOPOLY</h3>
-                  <h4 className="kabel-font-sub mb0">CALCULATOR</h4>                  
+                  <h3 className="kabel-font-main title-logo mt0 mb2">
+                    MONOPOLY
+                  </h3>
+                  <h4 className="kabel-font-sub mb0">CALCULATOR</h4>
                 </div>
               </div>
               <h4 className="w-50-l dn db-l sub-header f6-l">
@@ -303,27 +305,47 @@ class App extends React.Component {
                       client="ca-pub-6063578944512286"
                       slot="8034558454"
                       format="auto"
-                    />          
+                    />
                   </div>
                   <div className="dn db-ns fixed items-center justify-center ad-sense-container bg-white">
-                    <div className="tc pt3 f7 gray">The ads below help support this site! Thanks for your support! <a href="#donate">Donate!</a> </div>
+                    <div className="tc pt3 f7 gray">
+                      The ads below help support this site! Thanks for your
+                      support! <a href="#donate">Donate!</a>{" "}
+                    </div>
                     <AdSenseDesktop
                       client="ca-pub-6063578944512286"
                       slot="9906828034"
-                    />          
+                    />
                   </div>
                   <div className="tabs">
-                    <div id="tabs" className="mv0 tabs__menu flex nav bg-white property-tab z-max">
-                      <label htmlFor="section1" id="propertyAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br br2 br--top bl w-100 b--light-silver">
-                          Property Assets
-                        </label>
-                      <label htmlFor="section2" id="cashAssets" className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100 b--light-silver">
-                          Cash Assets
-                        </label> 
+                    <div
+                      id="tabs"
+                      className="mv0 tabs__menu flex nav bg-white property-tab z-max"
+                    >
+                      <label
+                        htmlFor="section1"
+                        id="propertyAssets"
+                        className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bt br br2 br--top bl w-100 b--light-silver"
+                      >
+                        Property Assets
+                      </label>
+                      <label
+                        htmlFor="section2"
+                        id="cashAssets"
+                        className="tabs__menu-item ph3 tc pv2 bg-animate hover-bg-white pointer bb w-100 b--light-silver"
+                      >
+                        Cash Assets
+                      </label>
                     </div>
                     <div className="tabs__content">
                       <div>
-                        <input type="radio" className="dn" name="sections" id="section1" defaultChecked />
+                        <input
+                          type="radio"
+                          className="dn"
+                          name="sections"
+                          id="section1"
+                          defaultChecked
+                        />
                         <div className="tabs__content__info">
                           <div className="flex flex-row justify-center property-item-list-container">
                             <ul className="list-unstyled properties-item pl0 f7 f6-l mv0">
@@ -334,7 +356,7 @@ class App extends React.Component {
                             <AdSenseDesktop
                               client="ca-pub-6063578944512286"
                               slot="6243695446"
-                            />          
+                            />
                           </div>
                           <div className="flex flex-row justify-center subproperty-item-list-container">
                             <ul className="list-unstyled properties-item pl0 f7 f6-l mv0">
@@ -344,12 +366,15 @@ class App extends React.Component {
                         </div>
                       </div>
                       <div>
-                        <input type="radio" className="dn" name="sections" id="section2" />
+                        <input
+                          type="radio"
+                          className="dn"
+                          name="sections"
+                          id="section2"
+                        />
                         <div className="tabs__content__info">
                           <div className="flex flex-row items-center justify-center cash-asset-container">
-                            <ul className="w-100 pl0">
-                              {billsNode}
-                            </ul>
+                            <ul className="w-100 pl0">{billsNode}</ul>
                           </div>
                           <div className="flex flex-row justify-center cash-total-box">
                             <CashAssetsTotal
@@ -362,15 +387,53 @@ class App extends React.Component {
                   </div>
                 </div>
               </div>
-              <div id="donate" className="flex flex-column items-center mb5 mh2 mh0-ns">
-                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">If you enjoyed the calculator, my <a href="https://www.silversojourner.com" target="_blank" rel="noopener noreferrer">family and I</a> graciously accept donations. <br/>Thank you for your support!</div>
+              <div
+                id="donate"
+                className="flex flex-column items-center mb5 mh2 mh0-ns"
+              >
+                <div className="w-100 pa2 bg-light-gray tc f6 gray br2 br--top">
+                  If you enjoyed the calculator, my{" "}
+                  <a
+                    href="https://www.silversojourner.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    family and I
+                  </a>{" "}
+                  graciously accept donations. <br />
+                  Thank you for your support!
+                </div>
                 <div className="w-100 flex flex-row bb br bl b--light-gray justify-center pa2">
-                  <a href="https://paypal.me/pnwnelson" className="link dim bg-light-blue pa3 mh1 white br2" onClick={this.handleClickedPaypalDonateButton}><i className="mr1 fab fa-paypal"></i>PayPal</a>
-                  <div onClick={this.handleCopyBTCAddress} className="flex items-center link dim btc-orange pa2 mh1 white br2 pointer">
-                    <i className="f3 fab fa-bitcoin"></i><input className="offscreen" aria-hidden="true" id="btc-address" value="36Gr2KKZpyGPwZCzCGNm3SchpVBiZtx8Zv" />
+                  <a
+                    href="https://paypal.me/pnwnelson"
+                    className="link dim bg-light-blue pa3 mh1 white br2"
+                    onClick={this.handleClickedPaypalDonateButton}
+                  >
+                    <i className="mr1 fab fa-paypal"></i>PayPal
+                  </a>
+                  <div
+                    onClick={this.handleCopyBTCAddress}
+                    className="flex items-center link dim btc-orange pa2 mh1 white br2 pointer"
+                  >
+                    <i className="f3 fab fa-bitcoin"></i>
+                    <input
+                      className="offscreen"
+                      aria-hidden="true"
+                      id="btc-address"
+                      value="33cLwuxJAoGPhCcjstiwb1gtrj3PbnWaMp"
+                    />
                   </div>
-                  <div onClick={this.handleCopyETHAddress} className="flex items-center link dim eth-blue pa2 mh1 white br2 pointer">
-                    <i className="f3 fab fa-ethereum"></i><input className="offscreen" aria-hidden="true" id="eth-address" value="0xD4bD1D023261A1AE1796925c41091040BDB3B1A0" />
+                  <div
+                    onClick={this.handleCopyETHAddress}
+                    className="flex items-center link dim eth-blue pa2 mh1 white br2 pointer"
+                  >
+                    <i className="f3 fab fa-ethereum"></i>
+                    <input
+                      className="offscreen"
+                      aria-hidden="true"
+                      id="eth-address"
+                      value="0x6c19977ee4D98b44370E21cdb4f6331Ed3f3b7a9"
+                    />
                   </div>
                 </div>
               </div>
